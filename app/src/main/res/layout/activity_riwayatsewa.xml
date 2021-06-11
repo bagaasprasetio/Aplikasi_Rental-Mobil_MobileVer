@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".riwayatsewa"
+    android:orientation="vertical"
+    android:background="@drawable/bg_riwayat">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/ijo">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Riwayat Sewa"
+            android:fontFamily="@font/bold"
+            android:textSize="27dp"
+            android:textColor="@color/putih"
+            android:gravity="center"
+            android:layout_marginTop="40dp" />
+    </RelativeLayout>
+
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/refresh_data">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/shimmer_riwayat">
+                    <View
+                        android:layout_width="235dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/shimmer"/>
+                    <View
+                        android:layout_width="108dp"
+                        android:layout_height="59dp"
+                        android:background="#D9D9D9"
+                        android:layout_marginTop="40dp"/>
+                    <View
+                        android:layout_width="169dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/shimmer"
+                        android:layout_marginLeft="130dp"
+                        android:layout_marginTop="40dp"/>
+                    <View
+                        android:layout_width="169dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/shimmer"
+                        android:layout_marginTop="75dp"
+                        android:layout_marginLeft="130dp" />
+                    <View
+                        android:layout_width="102dp"
+                        android:layout_height="12dp"
+                        android:background="@drawable/shimmer"
+                        android:layout_marginTop="130dp"/>
+                    <View
+                        android:layout_width="297dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/shimmer"
+                        android:layout_marginTop="160dp"/>
+                    <View
+                        android:layout_width="297dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/shimmer"
+                        android:layout_marginTop="190dp"/>
+                    <View
+                        android:layout_width="297dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/shimmer"
+                        android:layout_marginTop="220dp"/>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/recy_riwayat"
+                    android:layout_marginTop="15dp">
+                </androidx.recyclerview.widget.RecyclerView>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

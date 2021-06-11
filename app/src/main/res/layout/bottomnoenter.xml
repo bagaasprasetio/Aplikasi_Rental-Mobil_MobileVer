@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="match_parent"
+    android:layout_height="480dp"
+    android:background="@drawable/bottomsheet"
+    android:layout_gravity="bottom"
+    android:id="@+id/noEnterContain">
+    
+    <ImageView
+        android:layout_width="301dp"
+        android:layout_height="173dp"
+        android:src="@drawable/notenter"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ooops, ada yang salah nih!"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/h1"
+        android:textSize="22dp"/>
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Sepertinya email kamu sudah terdaftar di sistem kami. Coba login dengan email yang sudah terdaftar ya!"
+        android:fontFamily="@font/regular"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"/>
+    
+    <Button
+        android:layout_width="272dp"
+        android:layout_height="46dp"
+        android:background="@drawable/button1"
+        android:text="Login Sekarang!"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/putih"
+        android:textAllCaps="false"
+        android:textSize="17dp"
+        android:foreground="?android:selectableItemBackground"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:id="@+id/btn_login"/>
+
+</LinearLayout>

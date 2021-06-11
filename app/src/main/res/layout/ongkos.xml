@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="78dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="70dp"
+        android:background="@drawable/edittext"
+        android:clickable="true"
+        android:layout_gravity="center"
+        android:foreground="?android:selectableItemBackground"
+        android:id="@+id/list_ongkos">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/kode_ongkos"
+                android:visibility="gone"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="tujuan"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/h1"
+                android:textSize="17dp"
+                android:id="@+id/tujuanTv"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp100000"
+                android:fontFamily="@font/bold"
+                android:textSize="17dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/h1"
+                android:id="@+id/biayaTv"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

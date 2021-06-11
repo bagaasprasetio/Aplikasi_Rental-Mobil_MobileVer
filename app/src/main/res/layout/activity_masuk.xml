@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".masuk"
+    android:orientation="vertical"
+    android:background="@drawable/gradient"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masuk"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/h1"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Silahkan masuk untuk melanjutkan"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/abu1"
+        android:textSize="17dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <EditText
+            android:id="@+id/emailuser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword" />
+    </LinearLayout>
+    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button1"
+            android:text="Masuk ke akunmu"
+            android:textAllCaps="false"
+            android:fontFamily="@font/bold"
+            android:textSize="17dp"
+            android:textColor="@color/putih"
+            android:gravity="center"
+            android:id="@+id/btn_masuk"
+            android:foreground="?android:attr/selectableItemBackground"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+
+    <!-- <androidx.cardview.widget.CardView
+            android:layout_width="317dp"
+            android:layout_height="230dp"
+            app:cardCornerRadius="11dp"
+            android:background="@drawable/edittext"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp">
+            <LinearLayout
+                android:layout_width="305dp"
+                android:layout_height="228dp"
+                android:orientation="vertical"
+                android:background="@color/putih">
+                <EditText
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:id="@+id/emailuser"/>
+                <EditText
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:id="@+id/pass" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView> !-->

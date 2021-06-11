@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/putih"
+    android:orientation="vertical"
+    tools:context=".dengandriver">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/bold"
+            android:gravity="center|top"
+            android:text="Sewa Dengan Driver"
+            android:textColor="@color/h1"
+            android:textSize="22dp" />
+    </RelativeLayout>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bluemuda"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="21dp"
+                        android:src="@drawable/hint"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="Semua biaya sewa dihitung perhari"
+                        android:fontFamily="@font/bold"
+                        android:textColor="@color/txtBlue"
+                        android:textSize="14dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Pilih Mobil Dulu"
+                    android:textColor="@color/h1"
+                    android:textSize="18dp"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/regular"
+                    android:text="Gambar cuma contoh, warna mungkin akan berbeda dengan aslinya"
+                    android:textSize="16dp"/>
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_car"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp">
+                    <View
+                        android:layout_width="113dp"
+                        android:layout_height="72dp"
+                        android:background="#D9D9D9" />
+                    <View
+                        android:layout_width="121dp"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="130dp"
+                        android:background="@drawable/shimmer" />
+                    <View
+                        android:layout_width="154dp"
+                        android:layout_height="8dp"
+                        android:layout_marginLeft="130dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/shimmer" />
+                    <View
+                        android:layout_width="154dp"
+                        android:layout_height="8dp"
+                        android:layout_marginLeft="130dp"
+                        android:layout_marginTop="45dp"
+                        android:background="@drawable/shimmer" />
+                    <View
+                        android:layout_width="154dp"
+                        android:layout_height="8dp"
+                        android:layout_marginLeft="130dp"
+                        android:layout_marginTop="60dp"
+                        android:background="@drawable/shimmer" />
+                    <View
+                        android:layout_width="113dp"
+                        android:layout_height="72dp"
+                        android:layout_marginTop="100dp"
+                        android:background="#D9D9D9" />
+                    <View
+                        android:layout_width="121dp"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="130dp"
+                        android:layout_marginTop="100dp"
+                        android:background="@drawable/shimmer" />
+                    <View
+                        android:layout_width="154dp"
+                        android:layout_height="8dp"
+                        android:layout_marginLeft="130dp"
+                        android:layout_marginTop="130dp"
+                        android:background="@drawable/shimmer" />
+                    <View
+                        android:layout_width="154dp"
+                        android:layout_height="8dp"
+                        android:layout_marginLeft="130dp"
+                        android:layout_marginTop="145dp"
+                        android:background="@drawable/shimmer" />
+                    <View
+                        android:layout_width="154dp"
+                        android:layout_height="8dp"
+                        android:layout_marginLeft="130dp"
+                        android:layout_marginTop="160dp"
+                        android:background="@drawable/shimmer" />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <ImageView
+                    android:id="@+id/empty_image"
+                    android:layout_width="150dp"
+                    android:layout_height="138dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/empty"
+                    android:visibility="gone" />
+                <TextView
+                    android:id="@+id/text_empty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/regular"
+                    android:text="Ooops, tidak ada data tersedia"
+                    android:textColor="@color/h1"
+                    android:textSize="16dp"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/pilih_mbl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:scrollbars="none">
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Pilih Drivernya"
+                    android:textColor="@color/h1"
+                    android:textSize="18dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tenang, semua driver akan memberikan  pelayanan yang terbaik buat kamu"
+                    android:fontFamily="@font/regular"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="20dp"/>
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_driver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp">
+                    <View
+                        android:layout_width="83dp"
+                        android:layout_height="98dp"
+                        android:background="#D9D9D9" />
+                    <View
+                        android:layout_width="153dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="110dp"
+                        android:background="@drawable/shimmer" />
+                    <View
+                        android:layout_width="127dp"
+                        android:layout_height="11dp"
+                        android:layout_marginLeft="110dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/shimmer" />
+                    <View
+                        android:layout_width="127dp"
+                        android:layout_height="11dp"
+                        android:layout_marginLeft="110dp"
+                        android:layout_marginTop="60dp"
+                        android:background="@drawable/shimmer" />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/pilih_driver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <ImageView
+                    android:id="@+id/empty_imageDriver"
+                    android:layout_width="150dp"
+                    android:layout_height="138dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/empty"
+                    android:visibility="gone" />
+                <TextView
+                    android:id="@+id/text_emptyDriver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/regular"
+                    android:text="Ooops, tidak ada data tersedia"
+                    android:textColor="@color/h1"
+                    android:textSize="16dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Mau buat tanggal berapa?"
+                    android:textColor="@color/h1"
+                    android:textSize="18dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih tanggal untuk pengambilan mobil"
+                    android:fontFamily="@font/regular"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="16dp"/>
+                <CalendarView
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/calendar_driver_tglsewa">
+                </CalendarView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Mau sampe kapan nih?"
+                    android:textColor="@color/h1"
+                    android:textSize="18dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih tanggal untuk pengembalian mobil"
+                    android:fontFamily="@font/regular"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="16dp"/>
+                <CalendarView
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/calendar_driver">
+                </CalendarView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Terus mau pergi kemana?"
+                    android:textColor="@color/h1"
+                    android:textSize="18dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dipilih sesuai dengan tujuan kamu ya"
+                    android:fontFamily="@font/regular"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="20dp"/>
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/shimmer_ongkos">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <View
+                            android:layout_width="300dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/shimmer"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"/>
+                        <View
+                            android:layout_width="300dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/shimmer"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"/>
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recy_ongkos"
+                    android:layout_marginTop="10dp">
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <Button
+                    android:id="@+id/btn_selanjutnya"
+                    android:layout_width="235dp"
+                    android:layout_height="53dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/button1"
+                    android:fontFamily="@font/bold"
+                    android:foreground="?android:selectableItemBackground"
+                    android:text="Selanjutnya"
+                    android:textAllCaps="false"
+                    android:textColor="@color/putih"
+                    android:textSize="17dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

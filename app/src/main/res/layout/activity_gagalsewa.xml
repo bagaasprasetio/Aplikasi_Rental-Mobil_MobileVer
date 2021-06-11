@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".gagalsewa"
+    android:orientation="vertical"
+    android:background="@color/putih">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Oops, Penyewaan Gagal!"
+        android:fontFamily="@font/bold"
+        android:textSize="22dp"
+        android:textColor="@color/h1"
+        android:gravity="center"
+        android:layout_marginTop="30dp"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/gagal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="-20dp"
+        android:layout_marginRight="-20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Di Pasar Banyak Barang Murah \n Jangan Lupa Membeli Roti \n Proses Penyewaan Gagal Nih \n Silahkan Coba Lagi!"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/tommyreg"
+        android:textSize="18dp"/>
+
+    <Button
+        android:layout_width="322dp"
+        android:layout_height="52dp"
+        android:background="@drawable/button1"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btn_cblg"
+        android:layout_gravity="center"
+        android:text="Coba Lagi Yuk!"
+        android:textColor="@color/putih"
+        android:fontFamily="@font/bold"
+        android:textAllCaps="false"
+        android:textSize="17dp"
+        android:foreground="?android:selectableItemBackground"/>
+
+</LinearLayout>

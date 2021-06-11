@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="bottom"
+    android:background="@drawable/bottomsheet"
+    android:id="@+id/user_container">
+    
+    <ImageView
+        android:layout_width="262dp"
+        android:layout_height="162dp"
+        android:src="@drawable/logout"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yakin mau Log Out?"
+        android:fontFamily="@font/bold"
+        android:textSize="22dp"
+        android:textColor="@color/h1"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tenang, kamu masih bisa masuk lagi kok!"
+        android:fontFamily="@font/tommyreg"
+        android:layout_marginTop="8dp"
+        android:textSize="19dp"/>
+    <Button
+        android:layout_width="272dp"
+        android:layout_height="46dp"
+        android:text="Log out"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/putih"
+        android:background="@drawable/buttonlogout"
+        android:textSize="17dp"
+        android:id="@+id/btn_logout"
+        android:foreground="?android:attr/selectableItemBackground"/>
+
+</LinearLayout>

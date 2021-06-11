@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:layout_gravity="bottom"
+    android:background="@drawable/bottomsheet"
+    android:id="@+id/bottomsk">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="273dp"
+                android:layout_height="149dp"
+                android:src="@drawable/surat"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Syarat dan Ketentuan"
+                android:fontFamily="@font/bold"
+                android:textSize="23dp"
+                android:gravity="center"
+                android:textColor="@color/h1"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:text="Dengan melakukan penyewaan, berarti anda setuju dengan peraturan berikut :"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/abu"
+                android:textSize="18dp"
+                android:textAlignment="center"
+                android:layout_gravity="center" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp">
+                <TextView
+                    android:layout_width="335dp"
+                    android:layout_height="wrap_content"
+                    android:text="1. Segala bentuk kehilangan, perampokan, penilangan, dll. Pihak carent tidak akan bertanggungjawab dan harus mengembalikan mobil tepat pada waktunya."
+                    android:fontFamily="@font/regular"
+                    android:textSize="16dp"/>
+                <TextView
+                    android:layout_width="335dp"
+                    android:layout_height="wrap_content"
+                    android:text="2. Asuransi digunakan apabila penyewa mengalami insiden kecelakaan. Jika penumpang meninggal dunia, maka pihak carent akan memberikan premi selama 2 Bulan."
+                    android:fontFamily="@font/regular"
+                    android:textSize="16dp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="335dp"
+                    android:layout_height="wrap_content"
+                    android:text="3. Bahan Bakar belum termasuk dalam harga sewa."
+                    android:fontFamily="@font/regular"
+                    android:textSize="16dp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="335dp"
+                    android:layout_height="wrap_content"
+                    android:text="4. Apabila penyewa sengaja menjual atau menggadaikan mobil, maka pihak carent akan melaporkan hal ini ke pihak berwajib."
+                    android:fontFamily="@font/regular"
+                    android:textSize="16dp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="335dp"
+                    android:layout_height="wrap_content"
+                    android:text="5. Jika penyewa telat mengembalikan mobil sesuai dengan lama yang telah ditentukan, maka akan dikenakan denda sebesar Rp1000/menit."
+                    android:fontFamily="@font/regular"
+                    android:textSize="16dp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="335dp"
+                    android:layout_height="wrap_content"
+                    android:text="6. Pihak carent berhak untuk menarik kembali mobil yang sedang dalam masa penyewaan."
+                    android:fontFamily="@font/regular"
+                    android:textSize="16dp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="335dp"
+                    android:layout_height="wrap_content"
+                    android:text="7. Penyewa dilarang keras untuk menambahkan, mengurangi dan mengganti aksesoris yang terdapat pada mobil yang disewa."
+                    android:fontFamily="@font/regular"
+                    android:textSize="16dp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="335dp"
+                    android:layout_height="wrap_content"
+                    android:text="8. Mobil harus dalam keadaan bersih seperti semula setelah selesai dipakai."
+                    android:fontFamily="@font/regular"
+                    android:textSize="16dp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="335dp"
+                    android:layout_height="wrap_content"
+                    android:text="9. Apabila penyewa ketahuan mengganti atau mengutil bagian mobil, maka bersedia akan dikenakan denda sesuai dengan barang yang diganti."
+                    android:fontFamily="@font/regular"
+                    android:textSize="16dp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="335dp"
+                    android:layout_height="wrap_content"
+                    android:text="10. Dilarang keras menyewa mobil untuk keperluan kriminal."
+                    android:fontFamily="@font/regular"
+                    android:textSize="16dp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="335dp"
+                    android:layout_height="wrap_content"
+                    android:text="11. Jika terdapat kerusakan pada mobil setelah dilakukan penyewaan, maka penyewa akan dikenakan denda sesuai dengan kerusakan pada mobil."
+                    android:fontFamily="@font/regular"
+                    android:textSize="16dp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="335dp"
+                    android:layout_height="wrap_content"
+                    android:text="12. Pihak carent berhak membatalkan penyewaan secara sepihak dan tanpa pemberitahuan."
+                    android:fontFamily="@font/regular"
+                    android:textSize="16dp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="335dp"
+                    android:layout_height="wrap_content"
+                    android:text="13. Hubungi Customer Care carent apabila terdapat kendala."
+                    android:fontFamily="@font/regular"
+                    android:textSize="16dp"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="272dp"
+                android:layout_height="46dp"
+                android:text="Sip, mengerti!"
+                android:fontFamily="@font/bold"
+                android:textSize="18dp"
+                android:textColor="@color/putih"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:background="@drawable/buttonok"
+                android:layout_marginTop="20dp"
+                android:foreground="?android:selectableItemBackground"
+                android:id="@+id/okengerti"/>
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".userprofile">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/refresh_user">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center|top"
+                android:background="@color/abuBg">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Akun Saya"
+                    android:fontFamily="@font/bold"
+                    android:textSize="30dp"
+                    android:textColor="@color/h1"
+                    android:layout_marginTop="60dp"/>
+
+                <LinearLayout
+                    android:layout_width="317dp"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/cardprofile"
+                    android:orientation="vertical">
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:id="@+id/shimmer_username">
+                        <View
+                            android:layout_width="250dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/shimmer"
+                            android:layout_gravity="center" />
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+                    <TextView
+                        android:id="@+id/tvUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/bold"
+                        android:gravity="center"
+                        android:text="Username"
+                        android:visibility="gone"
+                        android:textColor="@color/putih"
+                        android:textSize="22dp" />
+                </LinearLayout>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/shimmer_data"
+                    android:layout_marginTop="50dp">
+                    <View
+                        android:layout_width="317dp"
+                        android:layout_height="250dp"
+                        android:background="@drawable/shimmer"
+                        android:layout_gravity="center"/>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="317dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    app:cardCornerRadius="11dp"
+                    app:cardBackgroundColor="@color/putih"
+                    app:cardElevation="8dp"
+                    android:visibility="gone"
+                    android:id="@+id/user_identity">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Identitas - mu :"
+                                android:textColor="@color/h1"
+                                android:fontFamily="@font/bold"
+                                android:textSize="19dp"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center|top"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NIK : "
+                                android:fontFamily="@font/tommyreg"
+                                android:textSize="18dp"
+                                android:layout_marginTop="60dp"
+                                android:layout_marginLeft="10dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="60dp"
+                                android:layout_alignParentRight="true"
+                                android:text="NULL"
+                                android:textSize="18dp"
+                                android:fontFamily="@font/tommyreg"
+                                android:layout_marginRight="10dp"
+                                android:textColor="@color/h1"
+                                android:id="@+id/tvNIK" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Email : "
+                                android:fontFamily="@font/tommyreg"
+                                android:textSize="18dp"
+                                android:layout_marginTop="100dp"
+                                android:layout_marginLeft="10dp"/>
+                            <TextView
+                                android:layout_width="220dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="100dp"
+                                android:layout_alignParentRight="true"
+                                android:text="NULL"
+                                android:textAlignment="textEnd"
+                                android:textSize="18dp"
+                                android:fontFamily="@font/tommyreg"
+                                android:layout_marginRight="10dp"
+                                android:textColor="@color/h1"
+                                android:id="@+id/tvEmail"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Nomor Telepon : "
+                                android:fontFamily="@font/tommyreg"
+                                android:textSize="18dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginLeft="10dp"
+                                android:id="@+id/txtNotelp"
+                                android:layout_below="@+id/tvEmail"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvEmail"
+                                android:layout_marginTop="16dp"
+                                android:layout_toRightOf="@+id/txtNotelp"
+                                android:layout_alignParentRight="true"
+                                android:textAlignment="textEnd"
+                                android:text="NULL"
+                                android:textSize="18dp"
+                                android:fontFamily="@font/tommyreg"
+                                android:layout_marginRight="10dp"
+                                android:textColor="@color/h1"
+                                android:id="@+id/tvNoTelp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Alamat : "
+                                android:fontFamily="@font/tommyreg"
+                                android:textSize="18dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginLeft="10dp"
+                                android:id="@+id/txtAlamat"
+                                android:layout_below="@+id/tvNoTelp"/>
+                            <TextView
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:layout_alignParentRight="true"
+                                android:text="NULL"
+                                android:textAlignment="textEnd"
+                                android:textSize="18dp"
+                                android:layout_toRightOf="@+id/txtAlamat"
+                                android:fontFamily="@font/tommyreg"
+                                android:layout_marginRight="10dp"
+                                android:textColor="@color/h1"
+                                android:id="@+id/tvAlamat"
+                                android:layout_below="@+id/tvNoTelp"/>
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Ubah Identitas"
+                                android:fontFamily="@font/bold"
+                                android:textAllCaps="false"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:textColor="@color/header"
+                                android:layout_marginTop="245dp"
+                                android:textSize="15dp"
+                                android:id="@+id/ubah_identity"/>
+                        </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="317dp"
+                    android:layout_height="89dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="11dp"
+                    app:cardBackgroundColor="@color/putih"
+                    app:cardElevation="8dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Versi Aplikasi : "
+                            android:fontFamily="@font/tommyreg"
+                            android:textSize="18dp"
+                            android:layout_marginTop="33dp"
+                            android:layout_marginLeft="10dp"/>
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="1.0.0 Beta Pre-release"
+                            android:fontFamily="@font/tommyreg"
+                            android:textSize="18dp"
+                            android:textColor="@color/h1"
+                            android:textAlignment="textEnd"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="22dp"
+                            android:layout_marginRight="10dp"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:layout_width="317dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Baca Syarat dan Ketentuan"
+                    android:textColor="@color/putih"
+                    android:fontFamily="@font/bold"
+                    android:textAllCaps="false"
+                    android:background="@drawable/buttonsyarat"
+                    android:textSize="18dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:id="@+id/syaratBtn"/>
+
+                <Button
+                    android:layout_width="317dp"
+                    android:layout_height="48dp"
+                    android:text="Log Out"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/putih"
+                    android:textSize="17dp"
+                    android:background="@drawable/buttonlogout"
+                    android:layout_marginTop="60dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:id="@+id/logoutBtn"/>
+                <Button
+                    android:layout_width="317dp"
+                    android:layout_height="48dp"
+                    android:text="Hubungi Kami"
+                    android:textSize="17dp"
+                    android:fontFamily="@font/bold"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/brand"
+                    android:background="@drawable/contactbutton"
+                    android:textAllCaps="false"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:id="@+id/pengaduanBtn"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2020 PW Bagas Prasetio. \nDuplicating this app are prohibited"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

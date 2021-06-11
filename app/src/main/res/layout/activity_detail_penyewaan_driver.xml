@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detailPenyewaanDriver"
+    android:orientation="vertical"
+    android:background="@color/putih">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Detail Penyewaan"
+        android:gravity="center"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/h1"
+        android:textSize="22dp" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/refresh_detail">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/bluemuda"
+                        android:padding="15dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/hint"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Harap diperhatikan, biaya jasa driver sudah termasuk biaya hidup driver selama di perjalanan. Jadi, Anda hanya menanggung biaya untuk bahan bakar"
+                            android:fontFamily="@font/bold"
+                            android:textColor="@color/txtBlue"
+                            android:layout_marginLeft="20dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext"
+                            android:padding="15dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tanggal Penyewaan :"
+                                android:fontFamily="@font/regular"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NULL"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="@font/regular"
+                                android:textColor="@color/h1"
+                                android:id="@+id/preview_tglpengambilan"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tanggal Pengembalian :"
+                                android:layout_marginTop="25dp"
+                                android:fontFamily="@font/regular"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NULL"
+                                android:id="@+id/preview_tglpengembalian"
+                                android:layout_marginTop="25dp"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="@font/regular"
+                                android:textColor="@color/h1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Lama Sewa :"
+                                android:layout_marginTop="50dp"
+                                android:fontFamily="@font/regular"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NULL"
+                                android:id="@+id/preview_lamasewa"
+                                android:layout_marginTop="50dp"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="@font/regular"
+                                android:textColor="@color/h1"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/abu3"
+                                android:layout_marginTop="80dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mobil :"
+                                android:layout_marginTop="90dp"
+                                android:fontFamily="@font/regular"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NULL"
+                                android:id="@+id/preview_mobildisewa"
+                                android:layout_marginTop="90dp"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="@font/regular"
+                                android:textColor="@color/h1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Harga Sewa : "
+                                android:layout_marginTop="115dp"
+                                android:fontFamily="@font/regular"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NULL"
+                                android:id="@+id/preview_hargasewa"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="115dp"
+                                android:fontFamily="@font/regular"
+                                android:textColor="@color/h1"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/abu3"
+                                android:layout_marginTop="145dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Nama Driver :"
+                                android:layout_marginTop="155dp"
+                                android:fontFamily="@font/regular" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NULL"
+                                android:id="@+id/preview_namadriver"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="155dp"
+                                android:fontFamily="@font/regular"
+                                android:textColor="@color/h1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tujuan : "
+                                android:layout_marginTop="180dp"
+                                android:fontFamily="@font/regular" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NULL"
+                                android:id="@+id/prev_detailtujuandriver"
+                                android:layout_marginTop="180dp"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="@font/regular"
+                                android:textColor="@color/h1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Biaya Jasa Driver : "
+                                android:layout_marginTop="205dp"
+                                android:fontFamily="@font/regular"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="NULL"
+                                android:id="@+id/preview_biayadriver"
+                                android:layout_marginTop="205dp"
+                                android:fontFamily="@font/regular"
+                                android:textColor="@color/h1"/>
+                        </RelativeLayout>
+                        <!-- <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext"
+                            android:padding="20dp">
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/start"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tanggal Pengambilan"
+                                android:fontFamily="@font/regular"
+                                android:layout_marginLeft="70dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NULL"
+                                android:id="@+id/preview_tglpengambilan"
+                                android:fontFamily="@font/bold"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="70dp"
+                                android:textColor="@color/h1"
+                                android:textSize="18dp"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/abu3"
+                                android:layout_marginTop="65dp"
+                                android:layout_marginLeft="70dp"/>
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/returnn"
+                                android:layout_marginTop="80dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tanggal Pengembalian"
+                                android:fontFamily="@font/regular"
+                                android:layout_marginLeft="70dp"
+                                android:layout_marginTop="80dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NULL"
+                                android:id="@+id/preview_tglpengembalian"
+                                android:fontFamily="@font/bold"
+                                android:layout_marginTop="100dp"
+                                android:layout_marginLeft="70dp"
+                                android:textColor="@color/h1"
+                                android:textSize="18dp"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/abu3"
+                                android:layout_marginTop="145dp"
+                                android:layout_marginLeft="70dp"/>
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/jam"
+                                android:layout_marginTop="160dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Lama Penyewaan"
+                                android:fontFamily="@font/regular"
+                                android:layout_marginLeft="70dp"
+                                android:layout_marginTop="160dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NULL"
+                                android:id="@+id/preview_lamasewa"
+                                android:fontFamily="@font/bold"
+                                android:layout_marginTop="180dp"
+                                android:layout_marginLeft="70dp"
+                                android:textColor="@color/h1"
+                                android:textSize="18dp"/>
+                        </RelativeLayout> !-->
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Metode Pembayaran"
+                            android:fontFamily="@font/bold"
+                            android:textSize="18dp"
+                            android:textColor="@color/h1"
+                            android:layout_marginTop="20dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pembayaran akan dilakukan di retail"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/regular"/>
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:id="@+id/shimmer_paymethod">
+                            <View
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="#D9D9D9"/>
+                            <View
+                                android:layout_width="154dp"
+                                android:layout_height="15dp"
+                                android:background="@drawable/shimmer"
+                                android:layout_marginLeft="70dp"
+                                android:layout_marginTop="15dp"/>
+                            <View
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="#D9D9D9"
+                                android:layout_marginTop="70dp"/>
+                            <View
+                                android:layout_width="154dp"
+                                android:layout_height="15dp"
+                                android:background="@drawable/shimmer"
+                                android:layout_marginLeft="70dp"
+                                android:layout_marginTop="85dp" />
+                            <View
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="#D9D9D9"
+                                android:layout_marginTop="140dp"/>
+                            <View
+                                android:layout_width="154dp"
+                                android:layout_height="15dp"
+                                android:background="@drawable/shimmer"
+                                android:layout_marginLeft="70dp"
+                                android:layout_marginTop="155dp"/>
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="138dp"
+                            android:src="@drawable/empty"
+                            android:layout_gravity="center"
+                            android:id="@+id/empty_image"
+                            android:visibility="gone"
+                            android:layout_marginTop="20dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ooops, tidak ada data tersedia!"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/h1"
+                            android:textSize="16dp"
+                            android:layout_gravity="center"
+                            android:id="@+id/text_empty"
+                            android:layout_marginTop="15dp"
+                            android:visibility="gone"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:listitem="@layout/listpaymethod"
+                            android:layout_marginTop="10dp"
+                            android:scrollbars="none"
+                            android:id="@+id/recy_paymethod">
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/backgroundtotal"
+                        android:layout_weight="5"
+                        android:gravity="bottom"
+                        app:cardElevation="10dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="20dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total Pembayaran"
+                                android:fontFamily="@font/bold"
+                                android:textColor="@color/h1"
+                                android:textSize="18dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rp0"
+                                android:fontFamily="@font/bold"
+                                android:textColor="@color/h1"
+                                android:textSize="18dp"
+                                android:id="@+id/total_bayar"
+                                android:layout_alignParentRight="true"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dengan melakukan penyewaan, saya menyetujui syarat dan ketentuan yang berlaku."
+                                android:fontFamily="@font/regular"
+                                android:textStyle="italic"
+                                android:layout_marginTop="30dp"/>
+                            <Button
+                                android:layout_width="272dp"
+                                android:layout_height="52dp"
+                                android:background="@drawable/button1"
+                                android:text="Sewa Sekarang"
+                                android:textAllCaps="false"
+                                android:fontFamily="@font/bold"
+                                android:textColor="@color/putih"
+                                android:textSize="17dp"
+                                android:foreground="?android:selectableItemBackground"
+                                android:layout_marginTop="80dp"
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/btn_prosesSewa"/>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>
+    <!-- <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/refresh_detail"
+        android:background="@color/abuBg">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/start"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tanggal Pengambilan"
+                            android:fontFamily="@font/regular"
+                            android:layout_marginLeft="70dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NULL"
+
+                            android:fontFamily="@font/bold"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="70dp"
+                            android:textColor="@color/h1"
+                            android:textSize="18dp"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/abu"
+                            android:layout_marginTop="65dp"/>
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/returnn"
+                            android:layout_marginTop="80dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tanggal Pengembalian"
+                            android:fontFamily="@font/regular"
+                            android:layout_marginLeft="70dp"
+                            android:layout_marginTop="80dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NULL"
+
+                            android:fontFamily="@font/bold"
+                            android:layout_marginTop="100dp"
+                            android:layout_marginLeft="70dp"
+                            android:textColor="@color/h1"
+                            android:textSize="18dp"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/abu"
+                            android:layout_marginTop="145dp"/>
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/jam"
+                            android:layout_marginTop="160dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lama Penyewaan"
+                            android:fontFamily="@font/regular"
+                            android:layout_marginLeft="70dp"
+                            android:layout_marginTop="160dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NULL"
+
+                            android:fontFamily="@font/bold"
+                            android:layout_marginTop="180dp"
+                            android:layout_marginLeft="70dp"
+                            android:textColor="@color/h1"
+                            android:textSize="18dp"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/prev_detailmobil"
+                    >
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mobil yang dipilih"
+                            android:fontFamily="@font/bold"
+                            android:textColor="@color/h1"
+                            android:textSize="18dp"/>
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/shimmer_detailmobil">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <View
+                                    android:layout_width="111dp"
+                                    android:layout_height="70dp"
+                                    android:background="@drawable/shimmer"
+                                    android:layout_marginTop="50dp"/>
+                                <View
+                                    android:layout_width="140dp"
+                                    android:layout_height="20dp"
+                                    android:background="@drawable/shimmer"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginLeft="130dp"/>
+                                <View
+                                    android:layout_width="100dp"
+                                    android:layout_height="10dp"
+                                    android:background="@drawable/shimmer"
+                                    android:layout_marginTop="80dp"
+                                    android:layout_marginLeft="130dp"/>
+                            </RelativeLayout>
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Driver dan Tujuan"
+                            android:fontFamily="@font/bold"
+                            android:textColor="@color/h1"
+                            android:textSize="18dp"/>
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/shimmer_detaildriver">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <View
+                                    android:layout_width="111dp"
+                                    android:layout_height="70dp"
+                                    android:background="@drawable/shimmer"
+                                    android:layout_marginTop="50dp"/>
+                                <View
+                                    android:layout_width="100dp"
+                                    android:layout_height="10dp"
+                                    android:background="@drawable/shimmer"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginLeft="130dp"/>
+                                <View
+                                    android:layout_width="100dp"
+                                    android:layout_height="10dp"
+                                    android:background="@drawable/shimmer"
+                                    android:layout_marginTop="80dp"
+                                    android:layout_marginLeft="130dp"/>
+                                <View
+                                    android:layout_width="100dp"
+                                    android:layout_height="10dp"
+                                    android:background="@drawable/shimmer"
+                                    android:layout_marginTop="110dp"
+                                    android:layout_marginLeft="130dp"/>
+                            </RelativeLayout>
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/prev_detaildriver"
+                    android:visibility="gone">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Driver dan Tujuan"
+                            android:fontFamily="@font/bold"
+                            android:textColor="@color/h1"
+                            android:textSize="18dp"/>
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="85dp"
+                            android:layout_height="110dp"
+                            android:layout_marginTop="50dp"
+                            android:id="@+id/prev_detailfotodriver"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nama Driver : "
+                            android:fontFamily="@font/regular"
+                            android:layout_marginTop="50dp"
+                            android:layout_marginLeft="130dp"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Driver"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/h1"
+                            android:ellipsize="end"
+
+                            android:layout_marginTop="50dp"
+                            android:layout_marginLeft="240dp"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tujuan : "
+                            android:fontFamily="@font/regular"
+                            android:layout_marginTop="80dp"
+                            android:layout_marginLeft="130dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tujuan"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/h1"
+                            android:ellipsize="end"
+
+                            android:layout_marginTop="80dp"
+                            android:layout_marginLeft="240dp"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Biaya Jasa Driver : "
+                            android:fontFamily="@font/regular"
+                            android:layout_marginTop="110dp"
+                            android:layout_marginLeft="130dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tujuan"
+                            android:fontFamily="@font/regular"
+                            android:textColor="@color/h1"
+                            android:ellipsize="end"
+
+                            android:layout_marginTop="110dp"
+                            android:layout_marginLeft="240dp"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView> !-->
+
+                <!-- <LinearLayout
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:id="@+id/detail_sewa_driv">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="20dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mobil :"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/regular" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NULL"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/regular"
+                            android:textSize="16dp"
+
+                            android:textColor="@color/h1"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Driver :"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/regular"
+                            android:layout_marginTop="25dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tidak Ada"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/regular"
+                            android:textSize="16dp"
+
+                            android:textColor="@color/h1"
+                            android:layout_marginTop="25dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tanggal Pengambilan :"
+                            android:fontFamily="@font/regular"
+                            android:textSize="16dp"
+                            android:layout_marginTop="50dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NULL"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="50dp"
+                            android:textColor="@color/h1"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/regular"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tanggal Balik :"
+                            android:fontFamily="@font/regular"
+                            android:textSize="16dp"
+                            android:layout_marginTop="75dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NULL"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="75dp"
+                            android:textColor="@color/h1"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/regular"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Harga Sewa :"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/regular"
+                            android:layout_marginTop="100dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/regular"
+                            android:textSize="16dp"
+                            android:layout_marginTop="100dp"
+
+                            android:textColor="@color/h1"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Biaya Driver :"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/regular"
+                            android:layout_marginTop="125dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp0"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/regular"
+                            android:textSize="16dp"
+                            android:layout_marginTop="125dp"
+
+                            android:textColor="@color/h1"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lama Sewa :"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/regular"
+                            android:layout_marginTop="150dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NULL"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/regular"
+                            android:textSize="16dp"
+                            android:layout_marginTop="150dp"
+
+                            android:textColor="@color/h1"/>
+                    </RelativeLayout>
+                </LinearLayout> !-->
+
+
+
+                <!--  !-->
+        <!-- </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout> !-->

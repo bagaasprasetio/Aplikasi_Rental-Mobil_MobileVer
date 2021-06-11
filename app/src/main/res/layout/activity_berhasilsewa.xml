@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".berhasilsewa"
+    android:orientation="vertical"
+    android:background="@color/putih">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Yeay, Penyewaan Berhasil!"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/bold"
+        android:textSize="22dp"
+        android:textColor="@color/h1"
+        android:gravity="center"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/berhasil"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="-20dp"
+        android:layout_marginRight="-20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jalan Jalan ke Salatiga \n Jangan Lupa Beli Oleh - Oleh \n Proses Penyewaan Berhasil Nih \n Hati - Hati di Jalan ya!"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/regular"
+        android:textSize="18dp"/>
+
+    <Button
+        android:layout_width="322dp"
+        android:layout_height="52dp"
+        android:background="@drawable/button1"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btn_riwayatt"
+        android:layout_gravity="center"
+        android:text="Lihat Riwayat Sewa"
+        android:textColor="@color/putih"
+        android:fontFamily="@font/bold"
+        android:textAllCaps="false"
+        android:textSize="17dp"
+        android:foreground="?android:selectableItemBackground"/>
+
+</LinearLayout>

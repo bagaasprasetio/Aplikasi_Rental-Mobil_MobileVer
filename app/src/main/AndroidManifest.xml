@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bagaasp.carent">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher_carent"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_carent_round"
+        android:supportsRtl="true"
+        android:theme="@style/intro"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".detailPenyewaanDriver" />
+        <activity android:name=".detailPenyewaan" />
+        <activity
+            android:name=".editdatauser"
+            android:theme="@style/daftar" />
+        <activity
+            android:name=".gagalsewa"
+            android:theme="@style/intro" />
+        <activity
+            android:name=".userprofile"
+            android:theme="@style/user" />
+        <activity
+            android:name=".dengandriver"
+            android:theme="@style/intro" />
+        <activity
+            android:name=".riwayatsewa"
+            android:theme="@style/riwayat" />
+        <activity
+            android:name=".berhasilsewa"
+            android:theme="@style/intro" />
+        <activity
+            android:name=".lepaskunci"
+            android:theme="@style/intro" />
+        <activity
+            android:name=".masuk"
+            android:theme="@style/intro" />
+        <activity
+            android:name=".beranda"
+            android:theme="@style/beranda" />
+        <activity
+            android:name=".daftar"
+            android:theme="@style/intro" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/intro" />
+        <activity android:name=".Splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".editdatauser"
+    android:orientation="vertical"
+    android:background="@color/abuBg">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ubah Profil"
+                android:fontFamily="@font/bold"
+                android:textSize="30dp"
+                android:textColor="@color/h1"
+                android:layout_marginTop="80dp"
+                android:gravity="center"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="317dp"
+                android:layout_height="430dp"
+                app:cardCornerRadius="11dp"
+                app:cardElevation="10dp"
+                android:layout_marginTop="80dp"
+                android:layout_gravity="center">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nama kamu :"
+                        android:fontFamily="@font/regular"
+                        android:textSize="17dp" />
+                    <EditText
+                        android:layout_width="286dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/value_username"
+                        android:layout_marginLeft="-4dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email kamu :"
+                        android:fontFamily="@font/regular"
+                        android:textSize="17dp"
+                        android:layout_marginTop="10dp"/>
+                    <EditText
+                        android:layout_width="286dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/value_email"
+                        android:layout_marginLeft="-4dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nomor Telepon :"
+                        android:fontFamily="@font/regular"
+                        android:textSize="17dp"
+                        android:layout_marginTop="10dp"/>
+                    <EditText
+                        android:layout_width="286dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/value_phonenumber"
+                        android:layout_marginLeft="-4dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alamat :"
+                        android:fontFamily="@font/regular"
+                        android:textSize="17dp"
+                        android:layout_marginTop="10dp"/>
+                    <EditText
+                        android:layout_width="286dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/value_address"
+                        android:layout_marginLeft="-4dp"/>
+
+                    <Button
+                        android:layout_width="111dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/button1"
+                        android:gravity="center"
+                        android:text="Ubah"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/bold"
+                        android:textColor="@color/putih"
+                        android:textSize="17dp"
+                        android:id="@+id/ubah_data"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginLeft="85dp"
+                        android:foreground="?android:selectableItemBackground"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    
+
+
+</LinearLayout>

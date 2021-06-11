@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="11dp"
+        android:layout_margin="10dp"
+        android:layout_gravity="center">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selasa, 14 April 2024."
+                android:fontFamily="@font/regular"
+                android:textColor="@color/abu1"
+                android:textSize="14dp"
+                android:id="@+id/hari_sewa"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jam 16:23:08"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/abu1"
+                android:layout_toRightOf="@+id/hari_sewa"
+                android:textSize="14dp"
+                android:id="@+id/jam_sewa"/>
+
+            <ImageView
+                android:layout_width="111dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="45dp"
+                android:id="@+id/gambar_mobil"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobil yang disewa :"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/abu1"
+                android:textSize="13dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="120dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Mobil"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/h1"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="50dp"
+                android:id="@+id/nama_mobil"
+                android:textSize="20dp"
+                android:ellipsize="end"
+                android:singleLine="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Driver :"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/abu1"
+                android:textSize="13dp"
+                android:layout_marginTop="89dp"
+                android:layout_marginLeft="120dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Driver"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/h1"
+                android:textSize="20dp"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="106dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:id="@+id/nama_driver"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail Penyewaan"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/h1"
+                android:textSize="15dp"
+                android:layout_marginTop="145dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kode Penyewaan : "
+                android:fontFamily="@font/regular"
+                android:textColor="@color/abu1"
+                android:layout_marginTop="170dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NULL"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/h1"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="170dp"
+                android:id="@+id/kode_penyewaan"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status Sewa :"
+                android:textColor="@color/abu1"
+                android:fontFamily="@font/regular"
+                android:layout_marginTop="190dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NULL"
+                android:textColor="@color/h1"
+                android:fontFamily="@font/regular"
+                android:layout_marginTop="190dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/status_sewa"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga Sewa :"
+                android:textColor="@color/abu1"
+                android:fontFamily="@font/regular"
+                android:layout_marginTop="211dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/h1"
+                android:fontFamily="@font/regular"
+                android:layout_marginTop="211dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/biaya_sewa"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Biaya Driver :"
+                android:textColor="@color/abu1"
+                android:fontFamily="@font/regular"
+                android:layout_marginTop="231dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/h1"
+                android:fontFamily="@font/regular"
+                android:layout_marginTop="231dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/biaya_driver"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Pengambilan :"
+                android:textColor="@color/abu1"
+                android:fontFamily="@font/regular"
+                android:layout_marginTop="252dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NULL"
+                android:id="@+id/tgl_pengambilan"
+                android:layout_marginTop="252dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/h1"
+                android:fontFamily="@font/regular"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Pengembalian :"
+                android:textColor="@color/abu1"
+                android:fontFamily="@font/regular"
+                android:layout_marginTop="273dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NULL"
+                android:id="@+id/tgl_pengembalian"
+                android:layout_marginTop="273dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/h1"
+                android:fontFamily="@font/regular"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lamanya :"
+                android:textColor="@color/abu1"
+                android:fontFamily="@font/regular"
+                android:layout_marginTop="295dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/h1"
+                android:fontFamily="@font/regular"
+                android:layout_marginTop="295dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/lamanya"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Biaya Kerusakan : "
+                android:fontFamily="@font/regular"
+                android:textColor="@color/abu1"
+                android:layout_marginTop="318dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/h1"
+                android:id="@+id/biaya_rusak"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="318dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Metode Bayar :"
+                android:textColor="@color/abu1"
+                android:fontFamily="@font/regular"
+                android:layout_marginTop="340dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NULL"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/h1"
+                android:id="@+id/metode_bayar"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="340dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Pembayaran :"
+                android:textColor="@color/h1"
+                android:fontFamily="@font/bold"
+                android:textSize="18dp"
+                android:layout_marginTop="380dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NULL"
+                android:textColor="@color/ijo"
+                android:fontFamily="@font/bold"
+                android:textSize="17dp"
+                android:layout_marginTop="380dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/total_bayar"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

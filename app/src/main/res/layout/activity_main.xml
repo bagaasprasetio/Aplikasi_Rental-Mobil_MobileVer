@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/putih">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selamat Datang!"
+        android:gravity="center"
+        android:textColor="@color/h1"
+        android:fontFamily="@font/bold"
+        android:textSize="29dp"
+        android:layout_marginTop="30dp"/>
+
+    <ImageView
+        android:layout_width="515dp"
+        android:layout_height="255dp"
+        android:src="@drawable/introneww"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="-25dp"/>
+
+    <TextView
+        android:layout_width="324dp"
+        android:layout_height="wrap_content"
+        android:text="Nikmati pengalaman merental mobil tanpa ribet, cepat dan efisien"
+        android:fontFamily="@font/regular"
+        android:textSize="19dp"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center" />
+
+    <Button
+        android:layout_width="134dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button1"
+        android:text="Daftar"
+        android:textAllCaps="false"
+        android:id="@+id/btn_daftar"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/putih"
+        android:fontFamily="@font/bold"
+        android:textSize="17dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sudah Buat Akun?"
+            android:layout_gravity="center"
+            android:fontFamily="@font/bold"
+            android:textColor="@color/abu1"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_masuk"
+            android:text="Masuk"
+            android:textSize="13dp"
+            android:layout_gravity="center"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textColor="#407BFF"
+            android:fontFamily="@font/bold" />
+    </LinearLayout>
+</LinearLayout>

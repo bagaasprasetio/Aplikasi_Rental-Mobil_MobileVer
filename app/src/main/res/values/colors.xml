@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="h1">#272525</color>
+    <color name="btntxt">#ffffff</color>
+    <color name="putih">#ffffff</color>
+    <color name="introstatus">#EFEFEF</color>
+    <color name="header">#407BFF</color>
+    <color name="abu">#ACACAC</color>
+    <color name="oren">#FF8800</color>
+    <color name="merah">#FC3F3F</color>
+    <color name="ijo">#3CB512</color>
+    <color name="abu1">#B4B4B4</color>
+    <color name="abuBg">#F8F8F8</color>
+    <color name="gradient1">#FD9BE4</color>
+    <color name="gradient2">#A59DF9</color>
+    <color name="logout">#E43838</color>
+    <color name="brand">#FF8647</color>
+    <color name="ijo2">#AFF88B</color>
+    <color name="biru2">#6EBBFF</color>
+    <color name="gradienbiru1">#09C6F9</color>
+    <color name="gradienbiru2">#045DE9</color>
+    <color name="orenheader">#FE7B47</color>
+    <color name="abuText">#A8A8A8</color>
+    <color name="kuning">#F2D74E</color>
+    <color name="bluemuda">#C4E3FF</color>
+    <color name="txtBlue">#51ACFF</color>
+    <color name="abu3">#D9D9D9</color>
+</resources>
+

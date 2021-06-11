@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/servergalat_contain"
+    android:theme="@style/intro">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gagal terhubung dengan server"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/h1"
+        android:textSize="22dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"/>
+    <TextView
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:text="Maaf, kami mengalami masalah teknis. Ditunggu beberapa saat lagi ya!"
+        android:fontFamily="@font/regular"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:layout_marginTop="5dp"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/serverfailed"
+        android:layout_marginTop="80dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"/>
+    <Button
+        android:layout_width="272dp"
+        android:layout_height="50dp"
+        android:background="@drawable/buttonputih"
+        android:layout_marginTop="-70dp"
+        android:layout_gravity="center"
+        android:text="Kembali ke Beranda"
+        android:textAllCaps="false"
+        android:textSize="17dp"
+        android:foreground="?android:selectableItemBackground"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/abuText"
+        android:id="@+id/btn_home"/>
+
+</LinearLayout>
